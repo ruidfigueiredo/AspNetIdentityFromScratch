@@ -1,0 +1,20 @@
+<h1>Home</h1>
+
+@if (User.Identity.IsAuthenticated) 
+{
+    <p>User @User.Identity.Name is signed in. <a href="/Account/Logout">Logout</a> </p>
+    
+} 
+else 
+{
+    <p>No user is signed in.</p>    
+}
+<div>
+    <a href="/Account/Login">Login</a>
+</div>
+<div>
+    <a href="/Account/Register">Register</a>
+</div>
+<div>
+    <a href="/Account/ForgotPassword">Forgot Password</a>
+</div>    
